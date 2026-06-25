@@ -5,8 +5,10 @@ using System.Diagnostics;
 
 namespace project_2.areas.User.Controllers
 {
+    [Area("User")]
     public class HomeController : Controller
     {
+      
         private readonly ILogger<HomeController> _logger;
         ApplicationDbContext context = new ApplicationDbContext();
 
