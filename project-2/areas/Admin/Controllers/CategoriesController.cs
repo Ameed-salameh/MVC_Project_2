@@ -26,5 +26,30 @@ namespace project_2.Areas.Admin.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult delete(int id)
+        {
+         
+            var category = context.Categories.Find(id);
+            context.Categories.Remove(category);
+            context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var category = context.Categories.Find(id);
+            return View(category);
+        }
+
+       
+
+        public IActionResult Update(Category request, int id)
+        {
+            context.Categories.Update(request);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

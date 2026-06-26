@@ -10,9 +10,10 @@
             <thead>
                 <tr>
                     <th style="width: 10px" scope="col">#</th>
-                    <th scope="col">Task</th>
-                    <th scope="col">Progress</th>
-                    <th style="width: 40px" scope="col">Label</th>
+                    <th scope="col">name</th>
+                    <th> action </th>
+
+                    
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +22,12 @@
                 <tr class="align-middle">
                     <td>@item.Id</td>
                         <td>@item.Name</td>
+                        <td> 
+                            <a asp-controller="categories" asp-action="delete" asp-route-id="@item.Id" class"btn btn-outline-danger">delete</a>
+                            <a asp-controller="categories" asp-action="Edit" asp-route-id="@item.Id" class"btn btn-outline-danger">Edit</a>
 
+                        </td>
+                       
                     
                 </tr>
                }
