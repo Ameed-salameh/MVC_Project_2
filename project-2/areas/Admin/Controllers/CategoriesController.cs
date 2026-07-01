@@ -43,8 +43,6 @@ namespace project_2.Areas.Admin.Controllers
             return View(category);
         }
 
-       
-
         public IActionResult Update(Category request, int id)
         {
             context.Categories.Update(request);
